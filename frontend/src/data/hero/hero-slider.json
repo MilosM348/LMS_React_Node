@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "backgroundImage": "slider_1.jpg",
+        "uniqClass": "slider-box slider-box1",
+        "title": "Welcome To CSummit.",
+        "desc": "Learn, Explore And Elevate Your Programming Skills. Set Your Dreams On The Fast Track",
+        "btnOneLink": "course",
+        "btnTwoLink": "contact"
+    },
+    {
+        "id": "2",
+        "backgroundImage": "slider_2.jpg",
+        "uniqClass": "slider-box slider-box2 text-right",
+        "title": "Welcome To CSummit.",
+        "desc": "Code Your Way To Success",
+        "btnOneLink": "course",
+        "btnTwoLink": "contact"
+    },
+    {
+        "id": "3",
+        "backgroundImage": "slider_3.jpg",
+        "uniqClass": "slider-box slider-box1",
+        "title": "Welcome To CSummit.",
+        "desc": "Learn, Explore And Elevate Your Programming Skills. Set Your Dreams On The Fast Track",
+        "btnOneLink": "course",
+        "btnTwoLink": "contact"
+    }
+]

@@ -1,0 +1,46 @@
+const mongoose = require('mongoose');
+const autoIncrement = require("mongoose-auto-increment");
+autoIncrement.initialize(mongoose.connection);
+
+const Schema = mongoose.Schema;
+//Define a schema
+const ModelSchema = new Schema({
+  title: {
+    type: String,
+    required: [true, "title is required."],
+  },
+  smallDescription: {
+    type: String,
+    required: [true, "smallDescription is required."],
+  },
+  description: {
+    type: String,
+    required: [true, "description is required."],
+  },
+  month: {
+    type: Number,
+    required: [true, "month is required."],
+  },
+  day: {
+    type: Number,
+    required: [true, "day is required."],
+  },
+  authorName: {
+    type: String,
+    required: [true, "authorName is required."],
+  },
+  commentNumber: {
+    type: Number,
+    required: [true, "commentNumber is required."],
+  },
+  thumbNumber: {
+    type: Number,
+    required: [true, "thumbNumber is required."],
+  },
+  image: {
+    type: String,
+    required: [true, "image is required."],
+  },
+});
+ModelSchema.plugin(autoIncrement.plugin, "Blog");
+module.exports = mongoose.model('Blog', ModelSchema);
