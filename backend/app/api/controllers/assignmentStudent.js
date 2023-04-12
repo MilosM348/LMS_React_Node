@@ -18,6 +18,10 @@ module.exports = {
       }
     });
   },
+  getAll: async function (req, res, next) {
+    let assignmentStudents = await assignmentStudentModel.find();
+    res.status(200).json({ message: null, data: assignmentStudents });
+  },
   getFilter: async function (req, res, next) {
     const filter = req.body;
     let assignmentStudents = await assignmentStudentModel.find(filter);
