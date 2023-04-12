@@ -18,6 +18,10 @@ module.exports = {
       }
     });
   },
+  getAll: async function (req, res, next) {
+    let blogs = await blogModel.find();
+    res.status(200).json({ message: null, data: blogs });
+  },
   getFilter: async function (req, res, next) {
     const filter = req.body;
     let blogs = await blogModel.find(filter);
