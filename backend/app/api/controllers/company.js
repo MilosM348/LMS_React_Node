@@ -25,11 +25,6 @@ module.exports = {
     let companys = await companyModel.find();
     res.status(200).json({ message: null, data: companys });
   },
-  getFilter: async function (req, res, next) {
-    const filter = req.body;
-    let companys = await companyModel.find(filter);
-    res.status(200).json({ message: null, data: companys });
-  },
   getById: function (req, res, next) {
     companyModel.findById(req.params.id, function (err, company) {
       if (err) {
