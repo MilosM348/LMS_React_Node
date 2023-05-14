@@ -18,10 +18,6 @@ module.exports = {
       }
     });
   },
-  getAll: async function (req, res, next) {
-    let commonSetting = await commonSettingModel.find();
-    res.status(200).json({ message: null, data: commonSetting });
-  },
   getFilter: async function (req, res, next) {
     const filter = req.body;
     let commonSetting = await commonSettingModel.find(filter);
