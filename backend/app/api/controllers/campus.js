@@ -18,9 +18,8 @@ module.exports = {
       }
     });
   },
-  getFilter: async function (req, res, next) {
-    const filter = req.body;
-    let campus = await campusModel.find(filter);
+  getAll: async function (req, res, next) {
+    let campus = await campusModel.find();
     res.status(200).json({ message: null, data: campus });
   },
   getById: function (req, res, next) {
