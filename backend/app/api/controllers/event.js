@@ -18,10 +18,6 @@ module.exports = {
       }
     });
   },
-  getAll: async function (req, res, next) {
-    let events = await eventModel.find();
-    res.status(200).json({ message: null, data: events });
-  },
   getFilter: async function (req, res, next) {
     const filter = req.body;
     let events = await eventModel.find(filter);
