@@ -22,11 +22,6 @@ module.exports = {
     let exams = await examModel.find();
     res.status(200).json({ message: null, data: exams });
   },
-  getFilter: async function (req, res, next) {
-    const filter = req.body;
-    let exams = await examModel.find(filter);
-    res.status(200).json({ message: null, data: exams });
-  },
   getById: function (req, res, next) {
     examModel.findById(req.params.id, function (err, exam) {
       if (err) {
