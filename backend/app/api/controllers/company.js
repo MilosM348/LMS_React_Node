@@ -25,6 +25,15 @@ module.exports = {
     let companys = await companyModel.find();
     res.status(200).json({ message: null, data: companys });
   },
+  getById: function (req, res, next) {
+    companyModel.findById(req.params.id, function (err, company) {
+      if (err) {
+        res.status(404).json({ message: "Company not found", data: null });
+      } else {
+        res.status(200).json({ message: null, data: company });
+      }
+    });
+  },
   updateById: function (req, res, next) {
     const company = req.body;
     companyModel.findByIdAndUpdate(req.params.id, company, function (

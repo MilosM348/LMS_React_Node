@@ -18,10 +18,6 @@ module.exports = {
       }
     });
   },
-  getAll: async function (req, res, next) {
-    let coupons = await couponModel.find();
-    res.status(200).json({ message: null, data: coupons });
-  },
   getFilter: async function (req, res, next) {
     const filter = req.body;
     let coupons = await couponModel.find(filter);
