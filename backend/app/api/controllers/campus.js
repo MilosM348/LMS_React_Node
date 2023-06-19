@@ -22,11 +22,6 @@ module.exports = {
     let campus = await campusModel.find();
     res.status(200).json({ message: null, data: campus });
   },
-  getFilter: async function (req, res, next) {
-    const filter = req.body;
-    let campus = await campusModel.find(filter);
-    res.status(200).json({ message: null, data: campus });
-  },
   getById: function (req, res, next) {
     campusModel.findById(req.params.id, function (err, campus) {
       if (err) {
