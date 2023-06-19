@@ -22,11 +22,6 @@ module.exports = {
     let blogs = await blogModel.find();
     res.status(200).json({ message: null, data: blogs });
   },
-  getFilter: async function (req, res, next) {
-    const filter = req.body;
-    let blogs = await blogModel.find(filter);
-    res.status(200).json({ message: null, data: blogs });
-  },
   getById: function (req, res, next) {
     blogModel.findById(req.params.id, function (err, blog) {
       if (err) {
